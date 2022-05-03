@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "codegen": "graph codegen",
+    "build:mainnet": "graph build --network mainnet",
+    "deploy:mainnet": "graph deploy --node https://api.thegraph.com/deploy/ alephao/Genzee --network mainnet",
+    "build:rinkeby": "graph build --network rinkeby",
+    "deploy:rinkeby": "graph deploy --node https://api.thegraph.com/deploy/ alephao/Genzee-Rinkeby --network rinkeby",
+    "create:local": "graph create --node http://localhost:8020/ alephao/Genzee --network local",
+    "remove:local": "graph remove --node http://localhost:8020/ alephao/Genzee --network local",
+    "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 alephao/Genzee --network local",
+    "test": "graph test",
+    "format": "prettier . -w",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.26.0"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.29.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.5",
+    "matchstick-as": "^0.4.2",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.-w": "prettier --write"
+  }
+}

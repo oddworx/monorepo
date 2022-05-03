@@ -1,0 +1,513 @@
+[
+  {
+    "type": "constructor",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "oddworxAddress",
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "type": "function",
+    "name": "HOLDING_REWARD",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "STAKING_REWARD",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "admin",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "changeRewardAmount",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "changeStaking",
+        "type": "bool"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "claimRewards",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftIds",
+        "type": "uint256[]"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getNftData",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint64",
+        "name": "",
+        "type": "uint64"
+      },
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "nftData",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "ownerAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "staked",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint64",
+        "name": "timestamp",
+        "type": "uint64"
+      },
+      {
+        "internalType": "bool",
+        "name": "legacyStaking",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "nftHoldRewardsActive",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "nftInterfaces",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "oddworxContract",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "contract IOddworx",
+        "name": "",
+        "type": "address"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "oddworxContractAddress",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "pause",
+    "inputs": [],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "paused",
+    "inputs": [],
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "setOddworxAddress",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "address_",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setUserNftData",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "isStaked",
+        "type": "bool"
+      },
+      {
+        "internalType": "uint256",
+        "name": "newTimestamp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "usingLegacyStaking",
+        "type": "bool"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "stakeNfts",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftIds",
+        "type": "uint256[]"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "toggleAdmin",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "address_",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "toggleNftInterface",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "address_",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "unpause",
+    "inputs": [],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "unstakeNftEmergency",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftIds",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "unstakeNfts",
+    "inputs": [
+      {
+        "internalType": "contract IERC721",
+        "name": "nftContract",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nftIds",
+        "type": "uint256[]"
+      }
+    ],
+    "outputs": [],
+
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "Paused",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "StakedNft",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftContract",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftId",
+        "type": "uint256",
+        "indexed": true
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Unpaused",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UnstakedNft",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftContract",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftId",
+        "type": "uint256",
+        "indexed": true
+      },
+      {
+        "name": "to",
+        "type": "address",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "UserClaimedRewards",
+    "inputs": [
+      {
+        "name": "user",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftContract",
+        "type": "address",
+        "indexed": true
+      },
+      {
+        "name": "nftId",
+        "type": "uint256",
+        "indexed": true
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false
+      }
+    ],
+    "anonymous": false
+  }
+]

@@ -1,0 +1,54 @@
+type Nft @entity {
+  id: ID!
+  tokenID: BigInt!
+  owner: User!
+
+  contractAddress: String!
+
+  # stakedAt records when the genzee was staked.
+  # If stakedAt is null, the genzee is not staked.
+  # If stakedAt is not null, you can calc rewards using:
+  # (20 * (currentTimestamp - stakedAt)) / 1 week
+  stakedAt: BigInt
+
+  legacyStake: Boolean!
+
+  # latestUnstakedClaim helps calculating unstaked rewards
+  # (10 * (currentTimestamp - latestUnstakedClaim)) / 1 week
+  # it resets when the genzee is unstaked and when oddx are claimed
+  # for an unstaked genzee
+  latestUnstakedClaim: BigInt!
+
+  # oddxClaimed is the total amount that this genzee claimed so far
+  oddxClaimed: BigInt!
+}
+
+type User @entity {
+  id: ID!
+  tokens: [Nft!]! @derivedFrom(field: "owner")
+
+  # how many genzees this user owns
+  genzeeBalance: Int!
+
+  # howm many foodz this user owns
+  foodzBalance: Int!
+
+  # how many oddx this user owns
+  oddxBalance: BigInt!
+
+  # how many oddx this user claimed
+  oddxClaimed: BigInt!
+}
+
+type ContractInfo @entity {
+  id: ID!
+
+  # total amount of genzees staked
+  totalStaked: Int!
+
+  # real owner count of genzees (staking messes with the contract balanceOf)
+  totalOwners: Int!
+
+  # total amount of oddx that were claimed
+  totalOddxClaimed: BigInt!
+}

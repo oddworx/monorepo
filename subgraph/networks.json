@@ -1,0 +1,56 @@
+{
+  "local": {
+    "Genzee": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "startBlock": 0
+    },
+    "Oddworx": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "startBlock": 0
+    },
+    "OddworxStaking": {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "startBlock": 0
+    },
+    "FoodzPartyV2": {
+      "address": "0x1234000000000000000000000000000000000000",
+      "startBlock": 0
+    }
+  },
+  "rinkeby": {
+    "Genzee": {
+      "address": "0x437C88DaA2C743CEa3B6337e8bEd2035405C5bdf",
+      "startBlock": 9956927
+    },
+    "Oddworx": {
+      "address": "0x8105Ecd044887b22ae21ef9070f54171df88Cd4b",
+      "startBlock": 9964879
+    },
+    "OddworxStaking": {
+      "address": "0x135f1f45295d29cc869cdBB0EC2e404888633b51",
+      "startBlock": 10091699
+    },
+    "FoodzPartyV2": {
+      "address": "0x1234000000000000000000000000000000000000",
+      "startBlock": 10091700
+    }
+  },
+  "mainnet": {
+    "Genzee": {
+      "address": "0x201675fBFAAAC3A51371E4C31FF73Ac14ceE2A5A",
+      "startBlock": 13411741
+    },
+    "Oddworx": {
+      "address": "0x4095547F958593B5431C0306e81df4293991d5B3",
+      "startBlock": 13986869
+    },
+    "OddworxStaking": {
+      "address": "0x428b6a13277116C62D751bebbC6f47011A0Cdc11",
+      "startBlock": 14200370
+    },
+    "FoodzPartyV2": {
+      "address": "0xa0fa51F54dbab68C068a2E2c62AA72Fe334D9b09",
+      "startBlock": 14672865
+    }
+  }
+}
