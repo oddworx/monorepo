@@ -5,24 +5,18 @@
     "deploy:mainnet": "graph deploy --node https://api.thegraph.com/deploy/ alephao/Genzee --network mainnet",
     "build:rinkeby": "graph build --network rinkeby",
     "deploy:rinkeby": "graph deploy --node https://api.thegraph.com/deploy/ alephao/Genzee-Rinkeby --network rinkeby",
-    "create:local": "graph create --node http://localhost:8020/ alephao/Genzee --network local",
-    "remove:local": "graph remove --node http://localhost:8020/ alephao/Genzee --network local",
-    "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 alephao/Genzee --network local",
+    "create:local": "graph create --node http://localhost:8020/ alephao/Genzee subgraph.local.yaml",
+    "remove:local": "graph remove --node http://localhost:8020/ alephao/Genzee subgraph.local.yaml",
+    "deploy:local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 alephao/Genzee --version-label 0.0.1 subgraph.local.yaml",
     "test": "graph test",
-    "format": "prettier . -w",
-    "prepare": "husky install"
+    "format": "prettier . -w"
   },
   "dependencies": {
     "@graphprotocol/graph-ts": "^0.26.0"
   },
   "devDependencies": {
-    "@graphprotocol/graph-cli": "^0.29.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.5",
+    "@graphprotocol/graph-cli": "^0.29.2",
     "matchstick-as": "^0.4.2",
     "prettier": "^2.5.1"
-  },
-  "lint-staged": {
-    "*.-w": "prettier --write"
   }
 }

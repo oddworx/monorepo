@@ -1,0 +1,103 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Genzee
+    network: local
+    source:
+      abi: Genzee
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Nft
+        - User
+        - ContractInfo
+      abis:
+        - name: Genzee
+          file: ./abis/Genzee.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/genzee.ts
+  - kind: ethereum
+    name: Oddworx
+    network: local
+    source:
+      abi: Oddworx
+      address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Nft
+        - User
+        - ContractInfo
+      abis:
+        - name: Oddworx
+          file: ./abis/Oddworx.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: StakedNft(indexed address,indexed uint256)
+          handler: handleStake
+        - event: UnstakedNft(indexed address,indexed uint256,uint256)
+          handler: handleUnstake
+        - event: UserClaimedNftRewards(indexed address,indexed uint256,uint256)
+          handler: handleClaim
+      file: ./src/oddworx.ts
+  - kind: ethereum
+    name: OddworxStaking
+    network: local
+    source:
+      abi: OddworxStaking
+      address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Nft
+        - User
+        - ContractInfo
+      abis:
+        - name: OddworxStaking
+          file: ./abis/OddworxStaking.json
+      eventHandlers:
+        - event: StakedNft(indexed address,indexed address,indexed uint256)
+          handler: handleStake
+        - event: UnstakedNft(indexed address,indexed address,indexed uint256,address)
+          handler: handleUnstake
+        - event: UserClaimedRewards(indexed address,indexed address,indexed
+            uint256,uint256)
+          handler: handleClaim
+      file: ./src/staking.ts
+  - kind: ethereum
+    name: FoodzPartyV2
+    network: local
+    source:
+      abi: FoodzPartyV2
+      address: "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Nft
+        - User
+        - ContractInfo
+      abis:
+        - name: FoodzPartyV2
+          file: ./abis/FoodzPartyV2.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: ./src/foodz.ts
