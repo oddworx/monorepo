@@ -4,7 +4,10 @@ Repo containing all the flattened contracts of Oddworx.
 
 ## Why
 
-Two reasons: unit-testing in other projects and setting up a test chain for testing user-interfaces.
+Two reasons: 
+
+* unit-testing in other projects
+* easy setup up of test chain with all contracts
 
 **Unit Testing**
 
@@ -35,7 +38,7 @@ In this repo we have everything we need to spin up a new chain and setup the spe
 
 ### Spinning up a test chain
 
-First start the hardhat network by running `yarn chain`
+First start the hardhat network by running `anvil`
 
 Then, edit [`setup.ts`](setup.ts) to mock the state you want for the chain. You'll have to explore the files inside the `scripts/` folder to find out what functions are available to setup the environment. The `setup.ts` file already has an example setup.
 

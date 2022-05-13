@@ -1,13 +1,10 @@
 {
   "scripts": {
-    "chain": "hardhat node",
-    "build": "hardhat compile",
     "setup": "ts-node setup.ts",
-    "typechain": "yarn build && typechain --target ethers-v5 --out-dir scripts/contracts artifacts/contracts/Genzee.sol/Genzee.json artifacts/contracts/Oddworx.sol/Oddworx.json artifacts/contracts/OddworxStaking.sol/OddworxStaking.json artifacts/contracts/GoldenPass.sol/GoldenPass.json artifacts/contracts/FoodzParty.sol/FoodzParty.json artifacts/contracts/FoodzPartyV2.sol/FoodzPartyV2.json"
+    "typechain": "typechain --target ethers-v5 --out-dir scripts/contracts out/Genzee.sol/Genzee.json out/Oddworx.sol/Oddworx.json out/OddworxStaking.sol/OddworxStaking.json out/GoldenPass.sol/GoldenPass.json out/FoodzParty.sol/FoodzParty.json out/FoodzPartyV2.sol/FoodzPartyV2.json"
   },
   "dependencies": {
     "ethers": "^5.6.2",
-    "hardhat": "^2.9.2",
     "merkletreejs": "^0.2.31"
   },
   "devDependencies": {
