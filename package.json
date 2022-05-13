@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "ts-node start.ts"
+    "start": "ts-node start.ts",
+    "stop": "ts-node stop.ts"
   },
   "dependencies": {
     "axios": "^0.27.2",
