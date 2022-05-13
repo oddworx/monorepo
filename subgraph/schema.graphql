@@ -19,6 +19,9 @@ type Nft @entity {
   # for an unstaked genzee
   latestUnstakedClaim: BigInt!
 
+  # stakedAt ? stakedAt : latestUnstakedClaim
+  rewardFrom: BigInt!
+
   # oddxClaimed is the total amount that this genzee claimed so far
   oddxClaimed: BigInt!
 }

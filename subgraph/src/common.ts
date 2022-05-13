@@ -67,6 +67,7 @@ export const loadOrCreateNft: (
     token.latestUnstakedClaim = BigInt.zero();
     token.owner = owner;
     token.legacyStake = false;
+    token.rewardFrom = BigInt.zero();
   }
   return token;
 };

@@ -18,6 +18,7 @@ export function handleStake(event: StakedNft): void {
   );
 
   token.stakedAt = event.block.timestamp;
+  token.rewardFrom = event.block.timestamp;
   token.save();
 
   let stats = loadOrCreateContractStats(contractAddress);
@@ -34,6 +35,7 @@ export function handleUnstake(event: UnstakedNft): void {
 
   token.stakedAt = null;
   token.latestUnstakedClaim = event.block.timestamp;
+  token.rewardFrom = event.block.timestamp;
   token.save();
 
   let stats = loadOrCreateContractStats(
@@ -65,5 +67,6 @@ export function handleClaim(event: UserClaimedRewards): void {
   } else {
     token.stakedAt = event.block.timestamp;
   }
+  token.rewardFrom = event.block.timestamp;
   token.save();
 }
