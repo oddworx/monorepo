@@ -1,11 +1,12 @@
 version: "3"
 services:
 
-  # Start a container running hardhat chain on 8545
+  # Start a container running anvil chain on 8545
   chain:
-    build: ./contracts
+    image: ghcr.io/foundry-rs/foundry:nightly-5a35e79e41a9a6acb1e9f05434fb678eba5069c6
     ports: 
       - "8545:8545"
+    entrypoint: anvil --host 0.0.0.0 --accounts 20
 
   # Start a container running an IPFS node (this is used by the graph-node)
   ipfs:
