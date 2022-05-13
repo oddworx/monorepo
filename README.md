@@ -9,9 +9,9 @@ There are two reasons for using this repo.
 
 1. You are developing a new contract that will interact with Oddworx contracts.
 
-If you want to deploy a contract that interacts with Oddworx contracts, you should use the flattened contracts inside the `contracts/contracts` directory,
+If you want to deploy a contract that interacts with Oddworx contracts, you should use the flattened contracts inside the `contracts/src` directory,
 
-2. You are developing something that will use the Oddworx subgraph.
+2. You are developing something that will use the Oddworx subgraph or want to contribute to the subgraph.
 
 To make development easier, you can spin up a local chain and local subgraph with all Oddworx contracts setup by cloning this repo and running `yarn start`.
 
